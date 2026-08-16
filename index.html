@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KSrealtor | Real Estate</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,Helvetica,sans-serif;color:#17202a;background:#f7f8fa;line-height:1.6}
+header{background:#102a43;color:#fff;position:sticky;top:0;z-index:10}.nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:18px 20px}.logo{font-size:26px;font-weight:800}.nav a{color:#fff;text-decoration:none;margin-left:22px;font-weight:600}
+.hero{background:linear-gradient(135deg,#102a43,#243b53);color:#fff;padding:95px 20px;text-align:center}.hero h1{font-size:52px;margin-bottom:14px}.hero p{font-size:20px;max-width:700px;margin:0 auto 28px;color:#d9e2ec}.btn{display:inline-block;background:#d4a72c;color:#102a43;text-decoration:none;padding:13px 24px;border-radius:7px;font-weight:800;margin:5px}.section{max-width:1100px;margin:auto;padding:70px 20px}.section h2{text-align:center;font-size:34px;margin-bottom:14px;color:#102a43}.lead{text-align:center;max-width:750px;margin:0 auto 35px;color:#52606d}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;padding:28px;border-radius:12px;box-shadow:0 5px 20px #102a4312}.card h3{color:#102a43;margin-bottom:8px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.gallery div{height:210px;border-radius:12px;background:linear-gradient(135deg,#bcccdc,#486581);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+form{max-width:650px;margin:auto;background:#fff;padding:30px;border-radius:12px;box-shadow:0 5px 20px #102a4312}input,textarea,select{width:100%;padding:13px;margin:8px 0 14px;border:1px solid #bcccdc;border-radius:6px;font:inherit}button{border:0;cursor:pointer}
+.contact{background:#102a43;color:#fff}.contact h2{color:#fff}.contact a{color:#fff}.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;text-align:center}.contact-box{padding:20px}
+footer{background:#071a2b;color:#cbd5e1;text-align:center;padding:20px}
+@media(max-width:760px){.nav{flex-direction:column;gap:12px}.nav a{margin:0 7px;font-size:14px}.hero h1{font-size:40px}.cards,.gallery,.contact-grid{grid-template-columns:1fr}.section{padding:50px 18px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">KSrealtor</div><nav><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#appointment">Appointment</a><a href="#contact">Contact</a></nav></div></header>
+
+<section class="hero" id="home">
+<h1>KSrealtor</h1>
+<p>Your trusted real-estate partner across Palghar, Saphale, Virar, Nalasopara, Vasai and nearby areas.</p>
+<a class="btn" href="#appointment">Book an Appointment</a>
+<a class="btn" href="https://wa.me/919716569156?text=Hello%20KSrealtor%2C%20I%20would%20like%20to%20know%20about%20your%20properties." target="_blank">WhatsApp Us</a>
+</section>
+
+<section class="section" id="about">
+<h2>About KSrealtor</h2>
+<p class="lead">KSrealtor helps clients explore real-estate opportunities with a professional, straightforward and customer-focused approach.</p>
+</section>
+
+<section class="section" id="services">
+<h2>Our Services</h2><p class="lead">Property solutions tailored to your requirements.</p>
+<div class="cards">
+<div class="card"><h3>Property Buying</h3><p>Find properties that match your location, budget and requirements.</p></div>
+<div class="card"><h3>Property Selling</h3><p>Present and connect your property with interested buyers.</p></div>
+<div class="card"><h3>Property Consultation</h3><p>Get guidance when evaluating your next real-estate opportunity.</p></div>
+</div></section>
+
+<section class="section" id="gallery">
+<h2>Gallery</h2><p class="lead">Property images can be added here as your listings become available.</p>
+<div class="gallery"><div>Property Photo 1</div><div>Property Photo 2</div><div>Property Photo 3</div><div>Property Photo 4</div><div>Property Photo 5</div><div>Property Photo 6</div></div>
+</section>
+
+<section class="section" id="appointment">
+<h2>Book an Appointment</h2><p class="lead">Send your details and preferred date. We will contact you to confirm the appointment.</p>
+<form onsubmit="sendWhatsApp(event)">
+<label>Name</label><input id="name" required placeholder="Your name">
+<label>Phone</label><input id="phone" required placeholder="Your phone number">
+<label>Preferred Date</label><input id="date" type="date" required>
+<label>Message</label><textarea id="message" rows="4" placeholder="Tell us what property you are looking for"></textarea>
+<button class="btn" type="submit">Request Appointment on WhatsApp</button>
+</form></section>
+
+<section class="section contact" id="contact">
+<h2>Contact KSrealtor</h2><div class="contact-grid">
+<div class="contact-box"><strong>Phone</strong><br><a href="tel:+919716569156">+91 97165 69156</a></div>
+<div class="contact-box"><strong>Email</strong><br><a href="mailto:KSrealtor06@gmail.com">KSrealtor06@gmail.com</a></div>
+<div class="contact-box"><strong>Office</strong><br>Virar West, Maharashtra</div>
+</div>
+<p style="text-align:center;margin-top:25px">Serving Palghar • Saphale • Virar • Nalasopara • Vasai • Naigaon • Mira Road • Kandivali</p>
+</section>
+<footer>© 2026 KSrealtor. All rights reserved.</footer>
+<script>
+function sendWhatsApp(e){
+ e.preventDefault();
+ const n=document.getElementById('name').value,p=document.getElementById('phone').value,d=document.getElementById('date').value,m=document.getElementById('message').value;
+ const text=`Hello KSrealtor,%0A%0AI would like to request an appointment.%0AName: ${encodeURIComponent(n)}%0APhone: ${encodeURIComponent(p)}%0APreferred date: ${encodeURIComponent(d)}%0AMessage: ${encodeURIComponent(m)}`;
+ window.open(`https://wa.me/919716569156?text=${text}`,'_blank');
+}
+</script>
+</body></html>
